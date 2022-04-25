@@ -19,16 +19,16 @@ getapi(api_url);
 function show(data) {
   var tab = document.getElementById("table");
   tab = `<tr>
-		<th>Id</th>
-		<th>Date</th>
-		<th>Todo</th>
-		<th>Status</th>
+  <th class="id-th" >Id</th>
+		<th class="date-th">Date</th>
+		<th class="title-th">Todo</th>
+		<th class="status-th">Status</th>
 		</tr>`;
 
   // Loop to access all rows
   for (let r of data) {
     tab += `<tr>
-	<td class="id">${r.id} </td>
+	<td class="id" >${r.id} </td>
 	<td class="date">${r.date}</td>
 	<td class="title">${r.title}</td>
 	<td class="status">${r.status}</td>		
@@ -45,6 +45,6 @@ function takevalue() {
   var status = "In-Progress";
 
   document.write(Todo + "__");
-  document.write(d.toDateString() + "__" );
+  document.write(d.toDateString() + "__");
   document.write(status);
 }
